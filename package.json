@@ -1,0 +1,22 @@
+{
+  "name": "group-finder",
+  "version": "1.0.0",
+  "description": "Pairs up users with one another based on the type activity they want to engage in, and the location of their activity.",
+  "main": "group-finder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/squidscode/Group-Finder.git"
+  },
+  "author": "Siddhant Mane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/squidscode/Group-Finder/issues"
+  },
+  "homepage": "https://github.com/squidscode/Group-Finder#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
