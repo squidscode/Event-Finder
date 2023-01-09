@@ -18,7 +18,7 @@ function parse_basic_authorization(auth_str){
 }
 
 function is_admin(username, password){
-    return (username == "admin" && password == "admin");
+    return (username == "admin" && password == "admin"); // Changed in deployment, nice try...
 }
 
 module.exports = {"parse_basic_authorization":parse_basic_authorization, "is_admin": is_admin};
