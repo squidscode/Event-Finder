@@ -1,5 +1,5 @@
 const Http = new XMLHttpRequest();
-const url='http://50.116.37.108:3000';
+const url='https://50.116.37.108:3000';
 
 function encodeBasicUserPassword(username, password){
     let str = username + ":" + password;
@@ -34,7 +34,7 @@ function send(reqType, urlEndpoint, headers, reqBody, callback){
             return;
         }
         
-        console.log(response);
+        // console.log(response);
         callback(Http.status, response);
     }
 }

@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const https = require('https');
+const fs = require('fs');
 const cors = require('cors');
 const mongoose = require("./database/mongoose");
 const auth = require('./auth');
@@ -766,4 +768,9 @@ app.delete(':username/groups/:group_id', (req, res) => {
         });
 });
 
-app.listen(3000, () => console.log("Server Connected on port 3000"));
+https.createServer({
+    key: fs.readFileSync('server.key'),
+    cert: fs.readFileSync('server.cert')
+  }, app).listen(3000, () => {
+    console.log('Listening...')
+  });

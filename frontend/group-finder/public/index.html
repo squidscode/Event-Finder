@@ -1,7 +1,6 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -13,8 +12,8 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/handlebars/4.7.7/handlebars.min.js"></script> 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="maps.css" rel="stylesheet">
-    <script src="maps.js"></script>
+    <link href="./maps.css" rel="stylesheet">
+    <script src="./maps.js"></script>
     <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
       {{#each locations}}
         <li class="location-result" data-location-index="{{index}}">
@@ -37,13 +36,10 @@
         </li>
       {{/each}}
     </script>
-
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -80,6 +76,6 @@
     <button class="hidden" id="map-display"></button>
     <button class="hidden" id="map-click"></button>
 
-    <script src="load_plans.js"></script>
+    <script src="./load_plans.js"></script>
   </body>
 </html>
