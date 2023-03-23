@@ -5,6 +5,8 @@ LOG_DIR="./logs"
 BLOG="backend_server_log.txt"
 FLOG="frontend_server_log.txt"
 
+# Make sure you kill the server before trying to run the server!
+
 # Create Log files.
 mkdir -p $LOG_DIR;
 (cd $LOG_DIR; touch $BLOG; touch $FLOG)
@@ -16,7 +18,7 @@ mkdir -p $LOG_DIR;
 backend_server_loop(){
     while true
     do
-        (cd $BACKEND_DIR; node app.js) | tee "$LOG_DIR/$BLOG"
+        (cd $BACKEND_DIR; node app.js) > "$LOG_DIR/$BLOG"
     done
 }
 
