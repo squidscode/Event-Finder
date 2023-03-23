@@ -1,0 +1,23 @@
+#! /bin/bash
+BACKEND_DIR="./backend"
+FRONTEND_DIR="./frontend/group-finder"
+LOG_DIR="./logs"
+BLOG="backend_server_log.txt"
+FLOG="frontend_server_log.txt"
+
+# Create Log files.
+mkdir -p $LOG_DIR;
+(cd $LOG_DIR; touch $BLOG; touch $FLOG)
+
+# Start frontend server:
+(cd $FRONTEND_DIR; serve -s build -p 80) > "$LOG_DIR/$FLOG" &
+
+# Start backend server (using a loop to ensure that the server is always running)
+backend_server_loop(){
+    while true
+    do
+        (cd $BACKEND_DIR; node app.js) | tee "$LOG_DIR/$BLOG"
+    done
+}
+
+backend_server_loop &

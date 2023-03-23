@@ -1,0 +1,6 @@
+#! /bin/bash
+TMP=$(mktemp)
+ps -alx | grep -E '(app.js)|(run_server)|(serve -s)' | grep -v grep | sed -r 's/ *[0-9]* *//' | sed -r 's/ .*//' > $TMP
+echo "The following processes will be killed: $(sed -e 'H;${x;s/\n/,/g;s/^,//;p;};d' $TMP)"
+cat $TMP | xargs -L1 kill -9
+rm $TMP

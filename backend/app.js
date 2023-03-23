@@ -9,6 +9,7 @@ const verify = require('./verify');
 
 const Account = require('./database/models/account').model;
 const Group = require('./database/models/group').model;
+const port = 3000
 
 // Allow 4200 to connect
 app.use(cors());
@@ -768,9 +769,13 @@ app.delete(':username/groups/:group_id', (req, res) => {
         });
 });
 
-https.createServer({
-    key: fs.readFileSync('server.key'),
-    cert: fs.readFileSync('server.cert')
-  }, app).listen(3000, () => {
-    console.log('Listening...')
-  });
+// https.createServer({
+//     key: fs.readFileSync('server.key'),
+//     cert: fs.readFileSync('server.cert')
+//   }, app).listen(3000, () => {
+//     console.log('Listening...')
+//   });
+
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`)
+  })

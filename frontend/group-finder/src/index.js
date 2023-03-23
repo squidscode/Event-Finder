@@ -4,7 +4,7 @@ import './index.css';
 import App from './app';
 
 // eslint-disable-next-line
-const SERVER = "http://localhost:3000";
+const SERVER = "http://squidscode.com:3000";
 
 const root = ReactDOM.createRoot(document.getElementById('navbar'));
 root.render(
