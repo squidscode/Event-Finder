@@ -1,0 +1,18 @@
+ UPDATE  The latest version of `serve` is 14.2.0
+ INFO  Accepting connections at http://localhost:80
+ HTTP  3/23/2023 12:55:59 AM ::1 GET /
+ HTTP  3/23/2023 12:55:59 AM ::1 Returned 200 in 52 ms
+ HTTP  3/23/2023 12:55:59 AM ::1 GET /maps.css
+ HTTP  3/23/2023 12:55:59 AM ::1 GET /static/css/main.5d844dec.chunk.css
+ HTTP  3/23/2023 12:55:59 AM ::1 GET /maps.js
+ HTTP  3/23/2023 12:55:59 AM ::1 GET /load_plans.js
+ HTTP  3/23/2023 12:55:59 AM ::1 GET /static/js/2.ecbb417a.chunk.js
+ HTTP  3/23/2023 12:55:59 AM ::1 GET /static/js/main.f476d8d9.chunk.js
+ HTTP  3/23/2023 12:55:59 AM ::1 Returned 200 in 5 ms
+ HTTP  3/23/2023 12:55:59 AM ::1 Returned 200 in 5 ms
+ HTTP  3/23/2023 12:55:59 AM ::1 Returned 200 in 7 ms
+ HTTP  3/23/2023 12:55:59 AM ::1 Returned 200 in 6 ms
+ HTTP  3/23/2023 12:55:59 AM ::1 Returned 200 in 5 ms
+ HTTP  3/23/2023 12:55:59 AM ::1 Returned 200 in 10 ms
+ HTTP  3/23/2023 12:56:00 AM ::1 GET /favicon.ico
+ HTTP  3/23/2023 12:56:00 AM ::1 Returned 200 in 1 ms

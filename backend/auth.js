@@ -5,6 +5,10 @@
  * @returns null if the auth string is incorrectly formatted, 
  * an object with "username" and "password" fields otherwise.
  */
+const fs = require('fs');
+const password_file = "./private/password.key";
+var pass_str = fs.readFileSync(password_file, { encoding: 'utf8' }).trim();
+
 function parse_basic_authorization(auth_str){
     if(auth_str == null) return null;
     if(auth_str.split(" ").length != 2) return null;
@@ -18,7 +22,7 @@ function parse_basic_authorization(auth_str){
 }
 
 function is_admin(username, password){
-    return (username == "admin" && password == "admin"); // Changed in deployment, nice try...
+    return (username == "admin" && password == pass_str);
 }
 
 module.exports = {"parse_basic_authorization":parse_basic_authorization, "is_admin": is_admin};

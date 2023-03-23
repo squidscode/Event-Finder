@@ -1,5 +1,6 @@
 const Http = new XMLHttpRequest();
-const url='https://50.116.37.108:3000';
+const url='http://50.116.37.108:3000';
+// const url='http://squidscode.com:3000';
 
 function encodeBasicUserPassword(username, password){
     let str = username + ":" + password;
