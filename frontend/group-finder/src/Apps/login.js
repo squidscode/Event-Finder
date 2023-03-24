@@ -58,6 +58,7 @@ class Login extends React.Component{
 
         if(password.length < 5){
             this.setState({...this.state, errorMsg: "Your password must be longer than 5 characters!"});
+            return;
         }
 
         send('POST', '/accounts', [], {'name': name, 'email': email, 'username': username, 'password': password},
